@@ -1,0 +1,8 @@
+{
+  "item.pauldron.test_item": "Test Item",
+  "item.pauldron.pauldron_iron": "Iron Pauldron",
+  "item.pauldron.pauldron_gold": "Gold Pauldron",
+
+  "curios.identifier.pauldron": "Pauldron",
+  "curios.modifiers.pauldron": "While equipped:"
+}

@@ -1,0 +1,28 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="[36,)"
+license="All rights reserved"
+
+[[mods]]
+modId="pauldron"
+version="0.1"
+displayName="Pauldron"
+credits="Me so far."
+authors="ArrowSamuel"
+description='''
+Just Pauldrons. :)
+'''
+
+[[dependencies.Pauldron]]
+   modId="forge"
+   mandatory=true
+   versionRange="[36,)"
+   ordering="NONE"
+   side="BOTH"
+
+[[dependencies.Pauldron]]
+   modId="minecraft"
+   mandatory=true
+   versionRange="[1.16.5,1.17)"
+   ordering="NONE"
+   side="BOTH"
