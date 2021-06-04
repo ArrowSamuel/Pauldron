@@ -1,6 +1,7 @@
 package com.arrowsamuel.pauldron.core.init;
 
 import com.arrowsamuel.pauldron.Pauldron;
+import com.arrowsamuel.pauldron.common.items.PauldronGold;
 import com.arrowsamuel.pauldron.common.items.PauldronIron;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -41,6 +42,6 @@ public class ItemInit {
     public static RegistryObject<Item>
 
             PAULDRON_IRON = addItem("pauldron_iron", new PauldronIron(itemProps().maxStackSize(1))),
-            PAULDRON_GOLD = addItem("pauldron_gold", new PauldronIron(itemProps().maxStackSize(1)));
+            PAULDRON_GOLD = addItem("pauldron_gold", new PauldronGold(itemProps().maxStackSize(1)));
 
 }

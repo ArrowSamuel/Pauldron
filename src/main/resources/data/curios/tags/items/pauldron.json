@@ -1,6 +1,7 @@
 {
   "replace": "false",
   "values": [
-    "pauldron:pauldron_iron"
+    "pauldron:pauldron_iron",
+    "pauldron:pauldron_gold"
   ]
 }
