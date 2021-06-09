@@ -19,6 +19,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Rarity;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
@@ -32,7 +34,7 @@ import java.util.UUID;
 public class PauldronGold extends Item {
     UUID ATTR_ID = new UUID(4076860146156848181l, -5926580289810921781l);
     public PauldronGold(Properties properties) {
-        super(properties.defaultMaxDamage(10).isImmuneToFire());
+        super(properties);
     }
 
     @Override
@@ -73,20 +75,19 @@ public class PauldronGold extends Item {
                                 1.0F);
             }
 
-
-
             @Override
             public Multimap<Attribute, AttributeModifier> getAttributeModifiers(SlotContext slotContext,
                                                                                 UUID uuid) {
                 Multimap<Attribute, AttributeModifier> atts = LinkedHashMultimap.create();
 
-                /*atts.put(Attributes.MOVEMENT_SPEED,
-                        new AttributeModifier(uuid, Pauldron.MOD_ID + ":speed_bonus", 0.1,
-                                AttributeModifier.Operation.MULTIPLY_TOTAL));*/
-
                 atts.put(Attributes.ARMOR,
-                        new AttributeModifier(uuid, Pauldron.MOD_ID + ":armor_bonus", 10,
+                        new AttributeModifier(uuid, Pauldron.MOD_ID + ":armor_bonus", 4,
                                 AttributeModifier.Operation.ADDITION));
+
+                /*atts.put(Attributes.ARMOR,
+                *       new AttributeModifier(uuid, Pauldron.MOD_ID + ":armor_bonus", 0,
+                *               AttributeModifier.Operation.ADDITION));
+                */
                 return atts;
             }
 
@@ -99,32 +100,12 @@ public class PauldronGold extends Item {
             public SoundInfo getEquipSound(SlotContext slotContext) {
                 return new SoundInfo(SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 1.0f, 1.0f);
             }
-
-
-
         };
-
     }
-
-
-
 
     @Override
     public Rarity getRarity(ItemStack stack) {
         return Rarity.RARE;
-    }
-
-
-
-   @Override
-    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchant) {
-        if (super.canApplyAtEnchantingTable(stack, enchant)) return true;
-        if (enchant == Enchantments.UNBREAKING
-                || enchant == Enchantments.MENDING
-                || enchant == Enchantments.THORNS)
-            return true;
-
-        return false;
     }
 
 }

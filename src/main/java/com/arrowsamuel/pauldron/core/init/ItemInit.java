@@ -20,24 +20,10 @@ public class ItemInit {
         return new Item.Properties().group(Pauldron.TAB);
     }
 
-    /*static RegistryObject<Item> addItem(String name) {
-        Item i = new Item(itemProps());
-        ITEM_MAP.put(name, i);
-        return ITEMS.register(name, () -> i);
-    }
-
-    static RegistryObject<Item> addItem(String name, Item.Properties props) {
-        Item i = new Item(props);
-        ITEM_MAP.put(name, i);
-        return ITEMS.register(name, () -> i);
-    }*/
-
     static RegistryObject<Item> addItem(String name, Item item) {
         ITEM_MAP.put(name, item);
         return ITEMS.register(name, () -> item);
     }
-
-    public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", () -> new Item(new Item.Properties().group(Pauldron.TAB)));
 
     public static RegistryObject<Item>
 

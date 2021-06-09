@@ -45,7 +45,7 @@ public class Pauldron {
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         InterModComms.sendTo(CuriosApi.MODID, SlotTypeMessage.REGISTER_TYPE,
-                () -> new SlotTypeMessage.Builder("pauldron").size(2)
+                () -> new SlotTypeMessage.Builder("pauldron").size(1)
                         .icon(new ResourceLocation(Pauldron.MOD_ID, "slots/empty_pauldron_slot")).build());
     }
 
@@ -71,7 +71,7 @@ public class Pauldron {
     public static final ItemGroup TAB = new ItemGroup("Pauldron") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(ItemInit.TEST_ITEM.get());
+            return new ItemStack(ItemInit.PAULDRON_IRON.get());
         }
     };
 

@@ -1,13 +1,13 @@
 
 modLoader="javafml" #mandatory
 loaderVersion="[36,)"
-license="All rights reserved"
+license="GPL 3.0"
 
 [[mods]]
 modId="pauldron"
 version="0.1"
 displayName="Pauldron"
-credits="Me so far."
+credits="C4 for the Curios API and Example Curios. "
 authors="ArrowSamuel"
 description='''
 Just Pauldrons. :)
